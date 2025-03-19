@@ -1,0 +1,598 @@
+46.4162 	WARNING 	User requested fullscreen with size [1280  720], but screen is actually [1512, 982]. Using actual size
+47.6593 	WARNING 	Couldn't measure a consistent frame rate!
+  - Is your graphics card set to sync to vertical blank?
+  - Are you running other processes on your computer?
+
+47.6597 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, autoLog=True, backendConf=UNKNOWN, backgroundFit=<method-wrapper '__getattribute__' of attributeSetter object at 0x7faa02bb9520>, backgroundImage=<method-wrapper '__getattribute__' of attributeSetter object at 0x7faa02bb94c0>, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([-1, -1, -1]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x7faa02bb9340>, gamma=None, gammaErrorPolicy='raise', lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x7faa108a5ee0>, multiSample=False, name='window1', numSamples=2, pos=[378.0, 245.5], screen=0, size=array([3024, 1964]), stencilBits=0, stereo=False, title='PsychoPy', units='norm', useFBO=True, useRetina=True, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+47.6598 	EXP 	window1: mouseVisible = True
+47.6598 	EXP 	window1: backgroundImage = None
+47.6598 	EXP 	window1: backgroundFit = 'cover'
+47.6601 	EXP 	window1: mouseVisible = True
+47.6893 	EXP 	Created fixation = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='fixation', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text='+', units='norm', win=Window(...), wrapWidth=1)
+47.6894 	EXP 	window1: mouseVisible = True
+47.7140 	EXP 	Created instructions = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.06, italic=False, languageStyle='LTR', name='instructions', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1.5)
+47.7142 	EXP 	window1: mouseVisible = True
+47.7198 	EXP 	Created break_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.06, italic=False, languageStyle='LTR', name='break_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1.5)
+47.7199 	EXP 	window1: mouseVisible = True
+47.7211 	EXP 	Created block_progress = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='block_progress', opacity=1.0, ori=0, pos=array([ 0. , -0.4]), rgb=UNKNOWN, text='', units='norm', win=Window(...), wrapWidth=1)
+47.7211 	EXP 	window1: mouseVisible = True
+47.7338 	EXP 	Created completion = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoDraw=False, autoLog=True, bold=False, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, draggable=False, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.08, italic=False, languageStyle='LTR', name='completion', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=UNKNOWN, text=str(...), units='norm', win=Window(...), wrapWidth=1)
+47.7389 	WARNING 	t of last frame was 79.72ms (=1/12)
+55.3288 	DATA 	Keypress: space
+55.3459 	WARNING 	t of last frame was 7606.98ms (=1/0)
+55.3459 	EXP 	block_progress: height = 0.04
+55.3459 	EXP 	block_progress: height = 0.04
+55.3459 	EXP 	block_progress: height = 0.04
+55.3459 	EXP 	block_progress: text = 'Block 1/3'
+57.3552 	WARNING 	t of last frame was 2009.29ms (=1/0)
+57.3557 	EXP 	Sound  started
+57.6591 	WARNING 	t of last frame was 303.96ms (=1/3)
+58.1636 	WARNING 	Multiple dropped frames have occurred - I'll stop bothering you about them!
+58.1640 	EXP 	Sound  stopped
+58.1640 	EXP 	Sound  started
+58.9723 	EXP 	Sound  stopped
+58.9723 	EXP 	Sound  started
+59.7792 	EXP 	Sound  stopped
+59.7792 	EXP 	Sound  started
+60.5871 	EXP 	Sound  stopped
+60.5871 	EXP 	Sound  started
+61.3951 	EXP 	Sound  stopped
+61.3951 	EXP 	Sound  started
+62.2025 	EXP 	Sound  stopped
+62.2025 	EXP 	Sound  started
+63.0106 	EXP 	Sound  stopped
+63.0106 	EXP 	Sound  started
+63.8179 	EXP 	Sound  stopped
+63.8179 	EXP 	Sound  started
+64.6262 	EXP 	Sound  stopped
+64.6262 	EXP 	Sound  started
+65.4337 	EXP 	Sound  started
+66.2436 	EXP 	Sound  stopped
+66.2437 	EXP 	Sound  started
+67.0518 	EXP 	Sound  stopped
+67.0518 	EXP 	Sound  started
+67.8597 	EXP 	Sound  stopped
+67.8597 	EXP 	Sound  started
+68.6677 	EXP 	Sound  stopped
+68.6677 	EXP 	Sound  started
+69.4757 	EXP 	Sound  stopped
+69.4758 	EXP 	Sound  started
+70.2825 	EXP 	Sound  stopped
+70.2825 	EXP 	Sound  started
+71.0908 	EXP 	Sound  stopped
+71.0909 	EXP 	Sound  started
+71.8991 	EXP 	Sound  stopped
+71.8991 	EXP 	Sound  started
+72.7074 	EXP 	Sound  stopped
+72.7074 	EXP 	Sound  started
+73.5152 	EXP 	Sound  stopped
+73.5153 	EXP 	Sound  started
+74.3225 	EXP 	Sound  stopped
+74.3225 	EXP 	Sound  started
+75.1308 	EXP 	Sound  stopped
+75.1308 	EXP 	Sound  started
+75.9386 	EXP 	Sound  stopped
+75.9387 	EXP 	Sound  started
+76.7463 	EXP 	Sound  stopped
+76.7463 	EXP 	Sound  started
+77.5533 	EXP 	Sound  stopped
+77.5533 	EXP 	Sound  started
+78.3610 	EXP 	Sound  stopped
+78.3610 	EXP 	Sound  started
+79.1684 	EXP 	Sound  stopped
+79.1684 	EXP 	Sound  started
+79.9765 	EXP 	Sound  stopped
+79.9765 	EXP 	Sound  started
+80.7841 	EXP 	Sound  stopped
+80.7841 	EXP 	Sound  started
+81.5916 	EXP 	Sound  stopped
+81.5916 	EXP 	Sound  started
+82.3994 	EXP 	Sound  stopped
+82.3995 	EXP 	Sound  started
+83.2070 	EXP 	Sound  stopped
+83.2070 	EXP 	Sound  started
+84.0148 	EXP 	Sound  stopped
+84.0148 	EXP 	Sound  started
+84.8230 	EXP 	Sound  stopped
+84.8230 	EXP 	Sound  started
+85.6307 	EXP 	Sound  stopped
+85.6307 	EXP 	Sound  started
+86.4380 	EXP 	Sound  stopped
+86.4381 	EXP 	Sound  started
+87.2454 	EXP 	Sound  stopped
+87.2454 	EXP 	Sound  started
+88.0540 	EXP 	Sound  stopped
+88.0540 	EXP 	Sound  started
+88.8621 	EXP 	Sound  stopped
+88.8622 	EXP 	Sound  started
+89.6701 	EXP 	Sound  stopped
+89.6701 	EXP 	Sound  started
+90.4777 	EXP 	Sound  stopped
+90.4778 	EXP 	Sound  started
+91.2845 	EXP 	Sound  stopped
+91.2845 	EXP 	Sound  started
+92.0931 	EXP 	Sound  stopped
+92.0931 	EXP 	Sound  started
+92.9003 	EXP 	Sound  stopped
+92.9003 	EXP 	Sound  started
+93.7082 	EXP 	Sound  stopped
+93.7082 	EXP 	Sound  started
+94.5155 	EXP 	Sound  stopped
+94.5156 	EXP 	Sound  started
+95.3224 	EXP 	Sound  stopped
+95.3225 	EXP 	Sound  started
+96.1301 	EXP 	Sound  stopped
+96.1301 	EXP 	Sound  started
+96.9386 	EXP 	Sound  stopped
+96.9386 	EXP 	Sound  started
+97.7681 	EXP 	Sound  stopped
+97.7681 	EXP 	Sound  started
+98.5766 	EXP 	Sound  stopped
+98.5766 	EXP 	Sound  started
+99.3853 	EXP 	Sound  stopped
+99.3854 	EXP 	Sound  started
+100.1935 	EXP 	Sound  stopped
+100.1936 	EXP 	Sound  started
+101.0011 	EXP 	Sound  stopped
+101.0012 	EXP 	Sound  started
+101.8084 	EXP 	Sound  stopped
+101.8085 	EXP 	Sound  started
+102.6166 	EXP 	Sound  stopped
+102.6166 	EXP 	Sound  started
+103.4244 	EXP 	Sound  stopped
+103.4244 	EXP 	Sound  started
+104.2326 	EXP 	Sound  stopped
+104.2327 	EXP 	Sound  started
+105.0405 	EXP 	Sound  stopped
+105.0405 	EXP 	Sound  started
+105.8477 	EXP 	Sound  stopped
+105.8477 	EXP 	Sound  started
+106.6550 	EXP 	Sound  stopped
+106.6550 	EXP 	Sound  started
+107.4633 	EXP 	Sound  stopped
+107.4634 	EXP 	Sound  started
+108.2709 	EXP 	Sound  stopped
+108.2709 	EXP 	Sound  started
+109.0791 	EXP 	Sound  stopped
+109.0791 	EXP 	Sound  started
+109.8874 	EXP 	Sound  stopped
+109.8874 	EXP 	Sound  started
+110.6950 	EXP 	Sound  stopped
+110.6950 	EXP 	Sound  started
+111.5028 	EXP 	Sound  stopped
+111.5028 	EXP 	Sound  started
+112.3090 	EXP 	Sound  stopped
+112.3090 	EXP 	Sound  started
+113.1166 	EXP 	Sound  stopped
+113.1166 	EXP 	Sound  started
+113.9242 	EXP 	Sound  stopped
+113.9242 	EXP 	Sound  started
+114.7315 	EXP 	Sound  stopped
+114.7315 	EXP 	Sound  started
+115.5389 	EXP 	Sound  stopped
+115.5390 	EXP 	Sound  started
+116.3465 	EXP 	Sound  stopped
+116.3466 	EXP 	Sound  started
+117.1539 	EXP 	Sound  stopped
+117.1540 	EXP 	Sound  started
+117.9618 	EXP 	Sound  stopped
+117.9618 	EXP 	Sound  started
+118.7689 	EXP 	Sound  stopped
+118.7689 	EXP 	Sound  started
+119.5772 	EXP 	Sound  stopped
+119.5772 	EXP 	Sound  started
+120.3848 	EXP 	Sound  stopped
+120.3848 	EXP 	Sound  started
+121.1923 	EXP 	Sound  stopped
+121.1923 	EXP 	Sound  started
+122.0002 	EXP 	Sound  stopped
+122.0002 	EXP 	Sound  started
+122.8071 	EXP 	Sound  stopped
+122.8071 	EXP 	Sound  started
+123.6145 	EXP 	Sound  stopped
+123.6145 	EXP 	Sound  started
+124.4226 	EXP 	Sound  stopped
+124.4226 	EXP 	Sound  started
+125.2296 	EXP 	Sound  stopped
+125.2296 	EXP 	Sound  started
+126.0380 	EXP 	Sound  stopped
+126.0381 	EXP 	Sound  started
+126.8462 	EXP 	Sound  stopped
+126.8463 	EXP 	Sound  started
+127.6533 	EXP 	Sound  stopped
+127.6533 	EXP 	Sound  started
+128.4614 	EXP 	Sound  stopped
+128.4615 	EXP 	Sound  started
+129.2688 	EXP 	Sound  stopped
+129.2689 	EXP 	Sound  started
+134.1028 	EXP 	break_text: height = 0.06
+134.1028 	EXP 	break_text: height = 0.06
+134.1028 	EXP 	break_text: height = 0.06
+134.1028 	EXP 	break_text: text = 'Take a short break.\n\nThe experiment will continue in 0 seconds.\n\n(Or press SPACE to continue now)'
+134.2067 	EXP 	break_text: text = 'Take a short break.\n\nThe experiment will continue in 0 seconds.\n\n(Or press SPACE to continue now)'
+134.3109 	EXP 	break_text: text = 'Take a short break.\n\nThe experiment will continue in 0 seconds.\n\n(Or press SPACE to continue now)'
+134.4150 	EXP 	break_text: text = 'Take a short break.\n\nThe experiment will continue in 0 seconds.\n\n(Or press SPACE to continue now)'
+134.5190 	EXP 	break_text: text = 'Take a short break.\n\nThe experiment will continue in 0 seconds.\n\n(Or press SPACE to continue now)'
+134.6230 	EXP 	break_text: text = 'Take a short break.\n\nThe experiment will continue in 0 seconds.\n\n(Or press SPACE to continue now)'
+134.7270 	EXP 	break_text: text = 'Take a short break.\n\nThe experiment will continue in 0 seconds.\n\n(Or press SPACE to continue now)'
+134.8304 	EXP 	break_text: text = 'Take a short break.\n\nThe experiment will continue in 0 seconds.\n\n(Or press SPACE to continue now)'
+134.9338 	EXP 	break_text: text = 'Take a short break.\n\nThe experiment will continue in 0 seconds.\n\n(Or press SPACE to continue now)'
+135.0376 	EXP 	break_text: text = 'Take a short break.\n\nThe experiment will continue in 0 seconds.\n\n(Or press SPACE to continue now)'
+135.1445 	EXP 	block_progress: height = 0.04
+135.1445 	EXP 	block_progress: height = 0.04
+135.1445 	EXP 	block_progress: height = 0.04
+135.1445 	EXP 	block_progress: text = 'Block 2/3'
+137.1539 	EXP 	Sound  started
+137.9615 	EXP 	Sound  stopped
+137.9615 	EXP 	Sound  started
+138.7689 	EXP 	Sound  stopped
+138.7689 	EXP 	Sound  started
+139.5771 	EXP 	Sound  stopped
+139.5771 	EXP 	Sound  started
+140.3849 	EXP 	Sound  stopped
+140.3849 	EXP 	Sound  started
+141.1926 	EXP 	Sound  stopped
+141.1927 	EXP 	Sound  started
+142.0002 	EXP 	Sound  stopped
+142.0002 	EXP 	Sound  started
+142.8074 	EXP 	Sound  stopped
+142.8075 	EXP 	Sound  started
+143.6148 	EXP 	Sound  stopped
+143.6148 	EXP 	Sound  started
+144.4224 	EXP 	Sound  stopped
+144.4224 	EXP 	Sound  started
+145.2298 	EXP 	Sound  stopped
+145.2298 	EXP 	Sound  started
+146.0377 	EXP 	Sound  stopped
+146.0377 	EXP 	Sound  started
+146.8464 	EXP 	Sound  stopped
+146.8464 	EXP 	Sound  started
+147.6541 	EXP 	Sound  stopped
+147.6542 	EXP 	Sound  started
+148.4622 	EXP 	Sound  stopped
+148.4622 	EXP 	Sound  started
+149.2691 	EXP 	Sound  stopped
+149.2691 	EXP 	Sound  started
+150.0767 	EXP 	Sound  stopped
+150.0767 	EXP 	Sound  started
+150.8853 	EXP 	Sound  stopped
+150.8854 	EXP 	Sound  started
+151.6937 	EXP 	Sound  stopped
+151.6937 	EXP 	Sound  started
+152.5023 	EXP 	Sound  stopped
+152.5023 	EXP 	Sound  started
+153.3090 	EXP 	Sound  stopped
+153.3091 	EXP 	Sound  started
+154.1169 	EXP 	Sound  stopped
+154.1169 	EXP 	Sound  started
+154.9243 	EXP 	Sound  stopped
+154.9243 	EXP 	Sound  started
+155.7318 	EXP 	Sound  stopped
+155.7319 	EXP 	Sound  started
+156.5397 	EXP 	Sound  stopped
+156.5398 	EXP 	Sound  started
+157.3478 	EXP 	Sound  stopped
+157.3478 	EXP 	Sound  started
+158.1554 	EXP 	Sound  stopped
+158.1554 	EXP 	Sound  started
+158.9634 	EXP 	Sound  stopped
+158.9635 	EXP 	Sound  started
+159.7704 	EXP 	Sound  stopped
+159.7705 	EXP 	Sound  started
+160.5783 	EXP 	Sound  stopped
+160.5784 	EXP 	Sound  started
+161.3865 	EXP 	Sound  stopped
+161.3865 	EXP 	Sound  started
+162.1940 	EXP 	Sound  stopped
+162.1941 	EXP 	Sound  started
+163.0018 	EXP 	Sound  stopped
+163.0019 	EXP 	Sound  started
+163.8087 	EXP 	Sound  stopped
+163.8087 	EXP 	Sound  started
+164.6168 	EXP 	Sound  stopped
+164.6169 	EXP 	Sound  started
+165.4244 	EXP 	Sound  stopped
+165.4245 	EXP 	Sound  started
+166.2349 	EXP 	Sound  stopped
+166.2350 	EXP 	Sound  started
+167.0430 	EXP 	Sound  stopped
+167.0430 	EXP 	Sound  started
+167.8501 	EXP 	Sound  stopped
+167.8502 	EXP 	Sound  started
+168.6580 	EXP 	Sound  stopped
+168.6580 	EXP 	Sound  started
+169.4653 	EXP 	Sound  stopped
+169.4653 	EXP 	Sound  started
+170.2715 	EXP 	Sound  stopped
+170.2715 	EXP 	Sound  started
+171.0791 	EXP 	Sound  stopped
+171.0792 	EXP 	Sound  started
+171.8867 	EXP 	Sound  stopped
+171.8867 	EXP 	Sound  started
+172.6949 	EXP 	Sound  stopped
+172.6949 	EXP 	Sound  started
+173.5029 	EXP 	Sound  stopped
+173.5029 	EXP 	Sound  started
+174.3107 	EXP 	Sound  stopped
+174.3107 	EXP 	Sound  started
+175.1188 	EXP 	Sound  stopped
+175.1188 	EXP 	Sound  started
+175.9265 	EXP 	Sound  stopped
+175.9265 	EXP 	Sound  started
+176.7343 	EXP 	Sound  stopped
+176.7343 	EXP 	Sound  started
+177.5427 	EXP 	Sound  stopped
+177.5428 	EXP 	Sound  started
+178.3501 	EXP 	Sound  stopped
+178.3501 	EXP 	Sound  started
+179.1585 	EXP 	Sound  stopped
+179.1585 	EXP 	Sound  started
+179.9658 	EXP 	Sound  stopped
+179.9659 	EXP 	Sound  started
+180.7725 	EXP 	Sound  stopped
+180.7726 	EXP 	Sound  started
+181.5802 	EXP 	Sound  stopped
+181.5802 	EXP 	Sound  started
+182.3880 	EXP 	Sound  stopped
+182.3880 	EXP 	Sound  started
+183.1945 	EXP 	Sound  stopped
+183.1945 	EXP 	Sound  started
+184.0025 	EXP 	Sound  stopped
+184.0026 	EXP 	Sound  started
+184.8100 	EXP 	Sound  stopped
+184.8100 	EXP 	Sound  started
+185.6177 	EXP 	Sound  stopped
+185.6177 	EXP 	Sound  started
+186.4250 	EXP 	Sound  stopped
+186.4250 	EXP 	Sound  started
+187.2338 	EXP 	Sound  stopped
+187.2338 	EXP 	Sound  started
+188.0421 	EXP 	Sound  stopped
+188.0421 	EXP 	Sound  started
+188.8496 	EXP 	Sound  stopped
+188.8497 	EXP 	Sound  started
+189.6572 	EXP 	Sound  stopped
+189.6572 	EXP 	Sound  started
+190.4653 	EXP 	Sound  stopped
+190.4653 	EXP 	Sound  started
+191.2724 	EXP 	Sound  stopped
+191.2724 	EXP 	Sound  started
+192.0800 	EXP 	Sound  stopped
+192.0800 	EXP 	Sound  started
+192.8876 	EXP 	Sound  stopped
+192.8876 	EXP 	Sound  started
+193.6952 	EXP 	Sound  stopped
+193.6952 	EXP 	Sound  started
+194.5029 	EXP 	Sound  stopped
+194.5029 	EXP 	Sound  started
+195.3093 	EXP 	Sound  stopped
+195.3093 	EXP 	Sound  started
+196.1169 	EXP 	Sound  stopped
+196.1169 	EXP 	Sound  started
+196.9244 	EXP 	Sound  stopped
+196.9245 	EXP 	Sound  started
+197.7317 	EXP 	Sound  stopped
+197.7317 	EXP 	Sound  started
+198.5394 	EXP 	Sound  stopped
+198.5394 	EXP 	Sound  started
+199.4467 	EXP 	Sound  stopped
+199.4468 	EXP 	Sound  started
+200.2546 	EXP 	Sound  stopped
+200.2546 	EXP 	Sound  started
+201.0633 	EXP 	Sound  stopped
+201.0633 	EXP 	Sound  started
+201.8707 	EXP 	Sound  stopped
+201.8707 	EXP 	Sound  started
+202.6784 	EXP 	Sound  stopped
+202.6785 	EXP 	Sound  started
+203.4860 	EXP 	Sound  stopped
+203.4860 	EXP 	Sound  started
+204.2935 	EXP 	Sound  stopped
+204.2935 	EXP 	Sound  started
+205.1017 	EXP 	Sound  stopped
+205.1017 	EXP 	Sound  started
+205.9099 	EXP 	Sound  stopped
+205.9100 	EXP 	Sound  started
+206.7176 	EXP 	Sound  stopped
+206.7176 	EXP 	Sound  started
+207.5262 	EXP 	Sound  stopped
+207.5263 	EXP 	Sound  started
+208.3344 	EXP 	Sound  stopped
+208.3344 	EXP 	Sound  started
+209.1423 	EXP 	Sound  stopped
+209.1424 	EXP 	Sound  started
+213.9682 	EXP 	break_text: text = 'Take a short break.\n\nThe experiment will continue in 0 seconds.\n\n(Or press SPACE to continue now)'
+214.0735 	EXP 	break_text: text = 'Take a short break.\n\nThe experiment will continue in 0 seconds.\n\n(Or press SPACE to continue now)'
+214.1778 	EXP 	break_text: text = 'Take a short break.\n\nThe experiment will continue in 0 seconds.\n\n(Or press SPACE to continue now)'
+214.2822 	EXP 	break_text: text = 'Take a short break.\n\nThe experiment will continue in 0 seconds.\n\n(Or press SPACE to continue now)'
+214.3862 	EXP 	break_text: text = 'Take a short break.\n\nThe experiment will continue in 0 seconds.\n\n(Or press SPACE to continue now)'
+214.4902 	EXP 	break_text: text = 'Take a short break.\n\nThe experiment will continue in 0 seconds.\n\n(Or press SPACE to continue now)'
+214.5942 	EXP 	break_text: text = 'Take a short break.\n\nThe experiment will continue in 0 seconds.\n\n(Or press SPACE to continue now)'
+214.6977 	EXP 	break_text: text = 'Take a short break.\n\nThe experiment will continue in 0 seconds.\n\n(Or press SPACE to continue now)'
+214.8008 	EXP 	break_text: text = 'Take a short break.\n\nThe experiment will continue in 0 seconds.\n\n(Or press SPACE to continue now)'
+214.9051 	EXP 	break_text: text = 'Take a short break.\n\nThe experiment will continue in 0 seconds.\n\n(Or press SPACE to continue now)'
+215.0129 	EXP 	block_progress: height = 0.04
+215.0129 	EXP 	block_progress: height = 0.04
+215.0129 	EXP 	block_progress: height = 0.04
+215.0129 	EXP 	block_progress: text = 'Block 3/3'
+217.0220 	EXP 	Sound  stopped
+217.0221 	EXP 	Sound  started
+217.8305 	EXP 	Sound  stopped
+217.8306 	EXP 	Sound  started
+218.6388 	EXP 	Sound  stopped
+218.6388 	EXP 	Sound  started
+219.4468 	EXP 	Sound  stopped
+219.4468 	EXP 	Sound  started
+220.2535 	EXP 	Sound  stopped
+220.2535 	EXP 	Sound  started
+221.0615 	EXP 	Sound  stopped
+221.0616 	EXP 	Sound  started
+221.8691 	EXP 	Sound  stopped
+221.8691 	EXP 	Sound  started
+222.6761 	EXP 	Sound  stopped
+222.6761 	EXP 	Sound  started
+223.4840 	EXP 	Sound  stopped
+223.4840 	EXP 	Sound  started
+224.2906 	EXP 	Sound  stopped
+224.2907 	EXP 	Sound  started
+225.0987 	EXP 	Sound  stopped
+225.0987 	EXP 	Sound  started
+225.9058 	EXP 	Sound  stopped
+225.9058 	EXP 	Sound  started
+226.7135 	EXP 	Sound  stopped
+226.7135 	EXP 	Sound  started
+227.5208 	EXP 	Sound  stopped
+227.5208 	EXP 	Sound  started
+228.3278 	EXP 	Sound  stopped
+228.3278 	EXP 	Sound  started
+229.1348 	EXP 	Sound  stopped
+229.1348 	EXP 	Sound  started
+229.9427 	EXP 	Sound  stopped
+229.9427 	EXP 	Sound  started
+230.7494 	EXP 	Sound  stopped
+230.7494 	EXP 	Sound  started
+231.5576 	EXP 	Sound  stopped
+231.5576 	EXP 	Sound  started
+232.3651 	EXP 	Sound  stopped
+232.3651 	EXP 	Sound  started
+233.1734 	EXP 	Sound  stopped
+233.1735 	EXP 	Sound  started
+233.9811 	EXP 	Sound  stopped
+233.9812 	EXP 	Sound  started
+234.7874 	EXP 	Sound  stopped
+234.7874 	EXP 	Sound  started
+235.5949 	EXP 	Sound  stopped
+235.5949 	EXP 	Sound  started
+236.4023 	EXP 	Sound  stopped
+236.4024 	EXP 	Sound  started
+237.2102 	EXP 	Sound  stopped
+237.2102 	EXP 	Sound  started
+238.0182 	EXP 	Sound  stopped
+238.0182 	EXP 	Sound  started
+238.8256 	EXP 	Sound  stopped
+238.8256 	EXP 	Sound  started
+239.6329 	EXP 	Sound  stopped
+239.6329 	EXP 	Sound  started
+240.4405 	EXP 	Sound  stopped
+240.4405 	EXP 	Sound  started
+241.2489 	EXP 	Sound  stopped
+241.2489 	EXP 	Sound  started
+242.0567 	EXP 	Sound  stopped
+242.0567 	EXP 	Sound  started
+242.8636 	EXP 	Sound  stopped
+242.8637 	EXP 	Sound  started
+243.6712 	EXP 	Sound  stopped
+243.6713 	EXP 	Sound  started
+244.4788 	EXP 	Sound  stopped
+244.4788 	EXP 	Sound  started
+245.2860 	EXP 	Sound  stopped
+245.2860 	EXP 	Sound  started
+246.0931 	EXP 	Sound  stopped
+246.0932 	EXP 	Sound  started
+246.9010 	EXP 	Sound  stopped
+246.9011 	EXP 	Sound  started
+247.7080 	EXP 	Sound  stopped
+247.7080 	EXP 	Sound  started
+248.5157 	EXP 	Sound  stopped
+248.5157 	EXP 	Sound  started
+249.3217 	EXP 	Sound  stopped
+249.3217 	EXP 	Sound  started
+250.1297 	EXP 	Sound  stopped
+250.1297 	EXP 	Sound  started
+250.9372 	EXP 	Sound  stopped
+250.9373 	EXP 	Sound  started
+251.7462 	EXP 	Sound  stopped
+251.7463 	EXP 	Sound  started
+252.5540 	EXP 	Sound  stopped
+252.5540 	EXP 	Sound  started
+253.3621 	EXP 	Sound  stopped
+253.3622 	EXP 	Sound  started
+254.1691 	EXP 	Sound  stopped
+254.1691 	EXP 	Sound  started
+254.9771 	EXP 	Sound  stopped
+254.9771 	EXP 	Sound  started
+255.7840 	EXP 	Sound  stopped
+255.7840 	EXP 	Sound  started
+256.5924 	EXP 	Sound  stopped
+256.5924 	EXP 	Sound  started
+257.4008 	EXP 	Sound  stopped
+257.4008 	EXP 	Sound  started
+258.2110 	EXP 	Sound  stopped
+258.2110 	EXP 	Sound  started
+259.0187 	EXP 	Sound  stopped
+259.0187 	EXP 	Sound  started
+259.8266 	EXP 	Sound  stopped
+259.8267 	EXP 	Sound  started
+260.6343 	EXP 	Sound  stopped
+260.6344 	EXP 	Sound  started
+261.4426 	EXP 	Sound  stopped
+261.4426 	EXP 	Sound  started
+262.2500 	EXP 	Sound  stopped
+262.2500 	EXP 	Sound  started
+263.0578 	EXP 	Sound  stopped
+263.0579 	EXP 	Sound  started
+263.8660 	EXP 	Sound  stopped
+263.8661 	EXP 	Sound  started
+264.6739 	EXP 	Sound  stopped
+264.6739 	EXP 	Sound  started
+265.4813 	EXP 	Sound  stopped
+265.4813 	EXP 	Sound  started
+266.2886 	EXP 	Sound  stopped
+266.2887 	EXP 	Sound  started
+267.0968 	EXP 	Sound  stopped
+267.0969 	EXP 	Sound  started
+267.9047 	EXP 	Sound  stopped
+267.9047 	EXP 	Sound  started
+268.7128 	EXP 	Sound  stopped
+268.7128 	EXP 	Sound  started
+269.5208 	EXP 	Sound  stopped
+269.5209 	EXP 	Sound  started
+270.3284 	EXP 	Sound  stopped
+270.3284 	EXP 	Sound  started
+271.1360 	EXP 	Sound  stopped
+271.1361 	EXP 	Sound  started
+271.9436 	EXP 	Sound  stopped
+271.9436 	EXP 	Sound  started
+272.7510 	EXP 	Sound  stopped
+272.7510 	EXP 	Sound  started
+273.5580 	EXP 	Sound  stopped
+273.5580 	EXP 	Sound  started
+274.3659 	EXP 	Sound  stopped
+274.3659 	EXP 	Sound  started
+275.1730 	EXP 	Sound  stopped
+275.1730 	EXP 	Sound  started
+275.9810 	EXP 	Sound  stopped
+275.9810 	EXP 	Sound  started
+276.7878 	EXP 	Sound  stopped
+276.7878 	EXP 	Sound  started
+277.5953 	EXP 	Sound  stopped
+277.5954 	EXP 	Sound  started
+278.4023 	EXP 	Sound  stopped
+278.4023 	EXP 	Sound  started
+279.2099 	EXP 	Sound  stopped
+279.2099 	EXP 	Sound  started
+280.0177 	EXP 	Sound  stopped
+280.0177 	EXP 	Sound  started
+280.8250 	EXP 	Sound  stopped
+280.8250 	EXP 	Sound  started
+281.6329 	EXP 	Sound  stopped
+281.6330 	EXP 	Sound  started
+282.4399 	EXP 	Sound  stopped
+282.4399 	EXP 	Sound  started
+283.2505 	EXP 	Sound  stopped
+283.2505 	EXP 	Sound  started
+284.0576 	EXP 	Sound  stopped
+284.0577 	EXP 	Sound  started
+284.8653 	EXP 	Sound  stopped
+284.8653 	EXP 	Sound  started
+285.6730 	EXP 	Sound  stopped
+285.6730 	EXP 	Sound  started
+286.4806 	EXP 	Sound  stopped
+286.4806 	EXP 	Sound  started
+287.2869 	EXP 	Sound  stopped
+287.2869 	EXP 	Sound  started
+288.0947 	EXP 	Sound  stopped
+288.0948 	EXP 	Sound  started
+288.9018 	EXP 	Sound  stopped
+288.9019 	EXP 	Sound  started
+292.7436 	EXP 	window1: mouseVisible = True

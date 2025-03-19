@@ -1,0 +1,914 @@
+[
+  {
+    "sequences": [
+      {
+        "stimuli": [
+          "N1",
+          "N1",
+          "N1",
+          "N1",
+          "N1",
+          "N2"
+        ],
+        "jitters": [
+          830,
+          702,
+          735,
+          828,
+          780,
+          750
+        ],
+        "standard": "N1",
+        "deviant": "N2",
+        "transition_type": "N1->N2",
+        "trigger_code": 212,
+        "duration": 6807
+      },
+      {
+        "stimuli": [
+          "N2",
+          "N2",
+          "N2",
+          "N2",
+          "N2",
+          "Ai1"
+        ],
+        "jitters": [
+          748,
+          787,
+          767,
+          724,
+          785,
+          792
+        ],
+        "standard": "N2",
+        "deviant": "Ai1",
+        "transition_type": "N2->Ai1",
+        "trigger_code": 223,
+        "duration": 6779
+      },
+      {
+        "stimuli": [
+          "Ai1",
+          "Ai1",
+          "Ai1",
+          "N1"
+        ],
+        "jitters": [
+          707,
+          787,
+          823,
+          827
+        ],
+        "standard": "Ai1",
+        "deviant": "N1",
+        "transition_type": "Ai1->N1",
+        "trigger_code": 231,
+        "duration": 4606
+      },
+      {
+        "stimuli": [
+          "N1",
+          "N1",
+          "N1",
+          "N1",
+          "N1",
+          "Ai1"
+        ],
+        "jitters": [
+          830,
+          847,
+          732,
+          738,
+          810,
+          789
+        ],
+        "standard": "N1",
+        "deviant": "Ai1",
+        "transition_type": "N1->Ai1",
+        "trigger_code": 213,
+        "duration": 6932
+      },
+      {
+        "stimuli": [
+          "Ai1",
+          "Ai1",
+          "Ai1",
+          "Ai1",
+          "Ai1",
+          "Ai1",
+          "Ai2"
+        ],
+        "jitters": [
+          762,
+          774,
+          778,
+          703,
+          816,
+          727,
+          760
+        ],
+        "standard": "Ai1",
+        "deviant": "Ai2",
+        "transition_type": "Ai1->Ai2",
+        "trigger_code": 234,
+        "duration": 7881
+      },
+      {
+        "stimuli": [
+          "Ai2",
+          "Ai2",
+          "Ai2",
+          "Ai2",
+          "Ai2",
+          "Ai2",
+          "Ai1"
+        ],
+        "jitters": [
+          741,
+          791,
+          709,
+          818,
+          841,
+          734,
+          718
+        ],
+        "standard": "Ai2",
+        "deviant": "Ai1",
+        "transition_type": "Ai2->Ai1",
+        "trigger_code": 243,
+        "duration": 7908
+      },
+      {
+        "stimuli": [
+          "Ai1",
+          "Ai1",
+          "Ai1",
+          "N2"
+        ],
+        "jitters": [
+          716,
+          773,
+          774,
+          828
+        ],
+        "standard": "Ai1",
+        "deviant": "N2",
+        "transition_type": "Ai1->N2",
+        "trigger_code": 232,
+        "duration": 4551
+      },
+      {
+        "stimuli": [
+          "N2",
+          "N2",
+          "N2",
+          "N2",
+          "N2",
+          "N2",
+          "N2",
+          "Ai2"
+        ],
+        "jitters": [
+          760,
+          847,
+          844,
+          744,
+          820,
+          702,
+          832,
+          739
+        ],
+        "standard": "N2",
+        "deviant": "Ai2",
+        "transition_type": "N2->Ai2",
+        "trigger_code": 224,
+        "duration": 9187
+      },
+      {
+        "stimuli": [
+          "Ai2",
+          "Ai2",
+          "Ai2",
+          "Ai2",
+          "Ai2",
+          "Ai2",
+          "Ai1"
+        ],
+        "jitters": [
+          739,
+          804,
+          788,
+          841,
+          734,
+          794,
+          719
+        ],
+        "standard": "Ai2",
+        "deviant": "Ai1",
+        "transition_type": "Ai2->Ai1",
+        "trigger_code": 243,
+        "duration": 7975
+      },
+      {
+        "stimuli": [
+          "Ai1",
+          "Ai1",
+          "Ai1",
+          "Ai1",
+          "N1"
+        ],
+        "jitters": [
+          830,
+          762,
+          846,
+          837,
+          836
+        ],
+        "standard": "Ai1",
+        "deviant": "N1",
+        "transition_type": "Ai1->N1",
+        "trigger_code": 231,
+        "duration": 5939
+      },
+      {
+        "stimuli": [
+          "N1",
+          "N1",
+          "N1",
+          "N1",
+          "N1",
+          "Ai2"
+        ],
+        "jitters": [
+          841,
+          830,
+          795,
+          815,
+          782,
+          745
+        ],
+        "standard": "N1",
+        "deviant": "Ai2",
+        "transition_type": "N1->Ai2",
+        "trigger_code": 214,
+        "duration": 6993
+      },
+      {
+        "stimuli": [
+          "Ai2",
+          "Ai2",
+          "Ai2",
+          "Ai2",
+          "Ai2",
+          "N2"
+        ],
+        "jitters": [
+          756,
+          813,
+          806,
+          784,
+          776,
+          743
+        ],
+        "standard": "Ai2",
+        "deviant": "N2",
+        "transition_type": "Ai2->N2",
+        "trigger_code": 242,
+        "duration": 6865
+      }
+    ],
+    "total_duration": 82423,
+    "total_stimuli": 72,
+    "transitions": {
+      "N1->N2": 1,
+      "N2->Ai1": 2,
+      "Ai1->N1": 2,
+      "N1->Ai1": 1,
+      "Ai1->Ai2": 1,
+      "Ai2->Ai1": 2,
+      "Ai1->N2": 1,
+      "N2->Ai2": 1,
+      "N1->Ai2": 1,
+      "Ai2->N2": 1
+    }
+  },
+  {
+    "sequences": [
+      {
+        "stimuli": [
+          "N1",
+          "N1",
+          "N1",
+          "N1",
+          "Ai2"
+        ],
+        "jitters": [
+          735,
+          739,
+          750,
+          711,
+          831
+        ],
+        "standard": "N1",
+        "deviant": "Ai2",
+        "transition_type": "N1->Ai2",
+        "trigger_code": 214,
+        "duration": 5587
+      },
+      {
+        "stimuli": [
+          "Ai2",
+          "Ai2",
+          "Ai2",
+          "Ai2",
+          "N2"
+        ],
+        "jitters": [
+          850,
+          779,
+          737,
+          730,
+          706
+        ],
+        "standard": "Ai2",
+        "deviant": "N2",
+        "transition_type": "Ai2->N2",
+        "trigger_code": 242,
+        "duration": 5624
+      },
+      {
+        "stimuli": [
+          "N2",
+          "N2",
+          "N2",
+          "N2",
+          "N2",
+          "N2",
+          "N2",
+          "N1"
+        ],
+        "jitters": [
+          730,
+          837,
+          748,
+          841,
+          819,
+          701,
+          814,
+          771
+        ],
+        "standard": "N2",
+        "deviant": "N1",
+        "transition_type": "N2->N1",
+        "trigger_code": 221,
+        "duration": 9159
+      },
+      {
+        "stimuli": [
+          "N1",
+          "N1",
+          "N1",
+          "N1",
+          "Ai1"
+        ],
+        "jitters": [
+          831,
+          819,
+          798,
+          726,
+          806
+        ],
+        "standard": "N1",
+        "deviant": "Ai1",
+        "transition_type": "N1->Ai1",
+        "trigger_code": 213,
+        "duration": 5802
+      },
+      {
+        "stimuli": [
+          "Ai1",
+          "Ai1",
+          "Ai1",
+          "Ai1",
+          "Ai1",
+          "Ai1",
+          "Ai1",
+          "N1"
+        ],
+        "jitters": [
+          838,
+          728,
+          831,
+          798,
+          750,
+          748,
+          719,
+          835
+        ],
+        "standard": "Ai1",
+        "deviant": "N1",
+        "transition_type": "Ai1->N1",
+        "trigger_code": 231,
+        "duration": 9173
+      },
+      {
+        "stimuli": [
+          "N1",
+          "N1",
+          "N1",
+          "N1",
+          "Ai1"
+        ],
+        "jitters": [
+          741,
+          767,
+          717,
+          816,
+          844
+        ],
+        "standard": "N1",
+        "deviant": "Ai1",
+        "transition_type": "N1->Ai1",
+        "trigger_code": 213,
+        "duration": 5707
+      },
+      {
+        "stimuli": [
+          "Ai1",
+          "Ai1",
+          "Ai1",
+          "Ai2"
+        ],
+        "jitters": [
+          705,
+          771,
+          799,
+          716
+        ],
+        "standard": "Ai1",
+        "deviant": "Ai2",
+        "transition_type": "Ai1->Ai2",
+        "trigger_code": 234,
+        "duration": 4454
+      },
+      {
+        "stimuli": [
+          "Ai2",
+          "Ai2",
+          "Ai2",
+          "Ai2",
+          "N1"
+        ],
+        "jitters": [
+          774,
+          760,
+          781,
+          770,
+          719
+        ],
+        "standard": "Ai2",
+        "deviant": "N1",
+        "transition_type": "Ai2->N1",
+        "trigger_code": 241,
+        "duration": 5628
+      },
+      {
+        "stimuli": [
+          "N1",
+          "N1",
+          "N1",
+          "N1",
+          "N1",
+          "N2"
+        ],
+        "jitters": [
+          806,
+          742,
+          728,
+          797,
+          805,
+          792
+        ],
+        "standard": "N1",
+        "deviant": "N2",
+        "transition_type": "N1->N2",
+        "trigger_code": 212,
+        "duration": 6852
+      },
+      {
+        "stimuli": [
+          "N2",
+          "N2",
+          "N2",
+          "N2",
+          "Ai2"
+        ],
+        "jitters": [
+          826,
+          729,
+          820,
+          782,
+          714
+        ],
+        "standard": "N2",
+        "deviant": "Ai2",
+        "transition_type": "N2->Ai2",
+        "trigger_code": 224,
+        "duration": 5684
+      },
+      {
+        "stimuli": [
+          "Ai2",
+          "Ai2",
+          "Ai2",
+          "Ai2",
+          "Ai2",
+          "Ai1"
+        ],
+        "jitters": [
+          791,
+          799,
+          848,
+          785,
+          748,
+          833
+        ],
+        "standard": "Ai2",
+        "deviant": "Ai1",
+        "transition_type": "Ai2->Ai1",
+        "trigger_code": 243,
+        "duration": 6995
+      },
+      {
+        "stimuli": [
+          "Ai1",
+          "Ai1",
+          "Ai1",
+          "Ai1",
+          "Ai1",
+          "Ai1",
+          "Ai2"
+        ],
+        "jitters": [
+          735,
+          750,
+          835,
+          714,
+          845,
+          830,
+          767
+        ],
+        "standard": "Ai1",
+        "deviant": "Ai2",
+        "transition_type": "Ai1->Ai2",
+        "trigger_code": 234,
+        "duration": 8037
+      },
+      {
+        "stimuli": [
+          "Ai2",
+          "Ai2",
+          "Ai2",
+          "Ai2",
+          "N2"
+        ],
+        "jitters": [
+          738,
+          715,
+          821,
+          736,
+          794
+        ],
+        "standard": "Ai2",
+        "deviant": "N2",
+        "transition_type": "Ai2->N2",
+        "trigger_code": 242,
+        "duration": 5626
+      }
+    ],
+    "total_duration": 84328,
+    "total_stimuli": 74,
+    "transitions": {
+      "N1->Ai2": 1,
+      "Ai2->N2": 2,
+      "N2->N1": 1,
+      "N1->Ai1": 2,
+      "Ai1->N1": 1,
+      "Ai1->Ai2": 2,
+      "Ai2->N1": 1,
+      "N1->N2": 1,
+      "N2->Ai2": 2,
+      "Ai2->Ai1": 1
+    }
+  },
+  {
+    "sequences": [
+      {
+        "stimuli": [
+          "N1",
+          "N1",
+          "N1",
+          "N1",
+          "N1",
+          "N1",
+          "N1",
+          "Ai1"
+        ],
+        "jitters": [
+          753,
+          772,
+          787,
+          812,
+          759,
+          829,
+          798,
+          717
+        ],
+        "standard": "N1",
+        "deviant": "Ai1",
+        "transition_type": "N1->Ai1",
+        "trigger_code": 213,
+        "duration": 9141
+      },
+      {
+        "stimuli": [
+          "Ai1",
+          "Ai1",
+          "Ai1",
+          "Ai1",
+          "Ai1",
+          "Ai2"
+        ],
+        "jitters": [
+          742,
+          789,
+          759,
+          794,
+          793,
+          746
+        ],
+        "standard": "Ai1",
+        "deviant": "Ai2",
+        "transition_type": "Ai1->Ai2",
+        "trigger_code": 234,
+        "duration": 6818
+      },
+      {
+        "stimuli": [
+          "Ai2",
+          "Ai2",
+          "Ai2",
+          "Ai2",
+          "Ai2",
+          "Ai2",
+          "N1"
+        ],
+        "jitters": [
+          806,
+          814,
+          771,
+          846,
+          846,
+          748,
+          738
+        ],
+        "standard": "Ai2",
+        "deviant": "N1",
+        "transition_type": "Ai2->N1",
+        "trigger_code": 241,
+        "duration": 8123
+      },
+      {
+        "stimuli": [
+          "N1",
+          "N1",
+          "N1",
+          "N1",
+          "N1",
+          "N2"
+        ],
+        "jitters": [
+          744,
+          838,
+          722,
+          846,
+          819,
+          751
+        ],
+        "standard": "N1",
+        "deviant": "N2",
+        "transition_type": "N1->N2",
+        "trigger_code": 212,
+        "duration": 6902
+      },
+      {
+        "stimuli": [
+          "N2",
+          "N2",
+          "N2",
+          "N2",
+          "N2",
+          "Ai2"
+        ],
+        "jitters": [
+          829,
+          721,
+          759,
+          746,
+          762,
+          785
+        ],
+        "standard": "N2",
+        "deviant": "Ai2",
+        "transition_type": "N2->Ai2",
+        "trigger_code": 224,
+        "duration": 6777
+      },
+      {
+        "stimuli": [
+          "Ai2",
+          "Ai2",
+          "Ai2",
+          "Ai2",
+          "Ai1"
+        ],
+        "jitters": [
+          705,
+          812,
+          717,
+          771,
+          761
+        ],
+        "standard": "Ai2",
+        "deviant": "Ai1",
+        "transition_type": "Ai2->Ai1",
+        "trigger_code": 243,
+        "duration": 5592
+      },
+      {
+        "stimuli": [
+          "Ai1",
+          "Ai1",
+          "Ai1",
+          "Ai1",
+          "Ai1",
+          "Ai1",
+          "N2"
+        ],
+        "jitters": [
+          838,
+          772,
+          811,
+          755,
+          725,
+          761,
+          825
+        ],
+        "standard": "Ai1",
+        "deviant": "N2",
+        "transition_type": "Ai1->N2",
+        "trigger_code": 232,
+        "duration": 8045
+      },
+      {
+        "stimuli": [
+          "N2",
+          "N2",
+          "N2",
+          "N2",
+          "N1"
+        ],
+        "jitters": [
+          714,
+          794,
+          700,
+          758,
+          702
+        ],
+        "standard": "N2",
+        "deviant": "N1",
+        "transition_type": "N2->N1",
+        "trigger_code": 221,
+        "duration": 5480
+      },
+      {
+        "stimuli": [
+          "N1",
+          "N1",
+          "N1",
+          "N2"
+        ],
+        "jitters": [
+          787,
+          761,
+          738,
+          811
+        ],
+        "standard": "N1",
+        "deviant": "N2",
+        "transition_type": "N1->N2",
+        "trigger_code": 212,
+        "duration": 4551
+      },
+      {
+        "stimuli": [
+          "N2",
+          "N2",
+          "N2",
+          "N2",
+          "Ai2"
+        ],
+        "jitters": [
+          772,
+          715,
+          776,
+          805,
+          704
+        ],
+        "standard": "N2",
+        "deviant": "Ai2",
+        "transition_type": "N2->Ai2",
+        "trigger_code": 224,
+        "duration": 5585
+      },
+      {
+        "stimuli": [
+          "Ai2",
+          "Ai2",
+          "Ai2",
+          "Ai2",
+          "Ai2",
+          "Ai2",
+          "Ai2",
+          "Ai1"
+        ],
+        "jitters": [
+          836,
+          729,
+          844,
+          758,
+          701,
+          763,
+          733,
+          700
+        ],
+        "standard": "Ai2",
+        "deviant": "Ai1",
+        "transition_type": "Ai2->Ai1",
+        "trigger_code": 243,
+        "duration": 8985
+      },
+      {
+        "stimuli": [
+          "Ai1",
+          "Ai1",
+          "Ai1",
+          "N2"
+        ],
+        "jitters": [
+          800,
+          762,
+          823,
+          837
+        ],
+        "standard": "Ai1",
+        "deviant": "N2",
+        "transition_type": "Ai1->N2",
+        "trigger_code": 232,
+        "duration": 4682
+      },
+      {
+        "stimuli": [
+          "N2",
+          "N2",
+          "N2",
+          "Ai2"
+        ],
+        "jitters": [
+          829,
+          816,
+          735,
+          813
+        ],
+        "standard": "N2",
+        "deviant": "Ai2",
+        "transition_type": "N2->Ai2",
+        "trigger_code": 224,
+        "duration": 4644
+      }
+    ],
+    "total_duration": 85325,
+    "total_stimuli": 75,
+    "transitions": {
+      "N1->Ai1": 1,
+      "Ai1->Ai2": 1,
+      "Ai2->N1": 2,
+      "N1->N2": 2,
+      "N2->Ai2": 3,
+      "Ai2->Ai1": 2,
+      "Ai1->N2": 2,
+      "N2->N1": 1
+    }
+  }
+]

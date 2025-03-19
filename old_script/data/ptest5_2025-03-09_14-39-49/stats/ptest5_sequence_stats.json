@@ -1,0 +1,85 @@
+{
+  "total_trials": 270,
+  "random_seed_used": {
+    "participant_id": "test5",
+    "age": "24",
+    "gender": "male",
+    "eeg": "no",
+    "sound_check": "no",
+    "view_sequence": "yes",
+    "max_duration_minutes": "5",
+    "auto_calculate_trials": "yes",
+    "isi_ms": "500",
+    "stimulus_duration_ms": "300",
+    "block_break_duration_s": "5",
+    "min_standards": "2",
+    "max_standards": "5",
+    "deviant_probability": "0.1",
+    "debug_mode": "no",
+    "trials_per_block": "500",
+    "num_blocks": "3",
+    "deviant_delay_ms": "0",
+    "random_seed": "",
+    "date": "2025-03-09_14-39-49",
+    "used_random_seed": 1741527594
+  },
+  "blocks": [
+    {
+      "block_num": 1,
+      "standard": "Ai",
+      "deviants": [
+        "N2"
+      ],
+      "deviant_count": 9,
+      "deviant_probability": 0.1,
+      "consecutive_deviants": false,
+      "standard_runs": {
+        "min": 2,
+        "max": 10,
+        "avg": 5.222222222222222
+      }
+    },
+    {
+      "block_num": 2,
+      "standard": "N",
+      "deviants": [
+        "Ai"
+      ],
+      "deviant_count": 9,
+      "deviant_probability": 0.1,
+      "consecutive_deviants": false,
+      "standard_runs": {
+        "min": 3,
+        "max": 10,
+        "avg": 5.111111111111111
+      }
+    },
+    {
+      "block_num": 3,
+      "standard": "N2",
+      "deviants": [
+        "Ai"
+      ],
+      "deviant_count": 9,
+      "deviant_probability": 0.1,
+      "consecutive_deviants": false,
+      "standard_runs": {
+        "min": 3,
+        "max": 11,
+        "avg": 5.333333333333333
+      }
+    }
+  ],
+  "experiment_parameters": {
+    "isi_ms": 500,
+    "stimulus_duration_ms": 300,
+    "block_break_duration_s": 5,
+    "deviant_delay_ms": 0,
+    "random_seed": 1741527594,
+    "total_trials_per_block": 90,
+    "min_standards": 2,
+    "max_standards": 5,
+    "deviant_probability": 0.1,
+    "num_blocks": 3
+  }
+}
