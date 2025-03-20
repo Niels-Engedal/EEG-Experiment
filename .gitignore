@@ -1,2 +1,4 @@
 /data/
 /__pycache__/
+/optimized_blocks/
+.DS_Store

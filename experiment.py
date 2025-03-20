@@ -22,10 +22,23 @@ import pickle
 from config import TRIGGER_CODES, DEFAULT_PARAMS
 from roving_sequences import create_roving_block, get_full_stimulus_list, generate_optimized_blocks
 
+
+# Import parallel port functions
+try:
+    # Use the triggers module approach from the example
+    from triggers import setParallelData
+except:
+    print("Error importing triggers module. Creating a simulated trigger function.")
+    # Define a fallback version if module not found
+    def setParallelData(code=1):
+        print(f"SIMULATED TRIGGER: {code}")
+        
+
+
 # Setup hardware preferences
-prefs.hardware['audioLib'] = 'PTB'
-prefs.hardware['audioLatencyMode'] = 3
-prefs.hardware['audioDevice'] = 14
+prefs.hardware['audioLib'] = 'PTB' # type: ignore
+prefs.hardware['audioLatencyMode'] = 3 # type: ignore
+prefs.hardware['audioDevice'] = 14 # type: ignore
 #prefs.hardware['audioLib'] = 'pyo'  # Alternative audio backend
 
 # ----- Folder Setup -----
@@ -201,32 +214,7 @@ def blocks_to_csv(blocks, stim_lists, participant_id, participant_responses=None
     print(f"Block data saved to {file_path}")
     return file_path
 
-def send_trigger(code):
-    """
-    Send a trigger code to the EEG system using parallel port.
-    
-    Parameters:
-    code (int): Trigger code to send
-    """
-    print(f"Sending trigger: {code}")
-    
-    try:
-        # Use the triggers module approach from the example
-        from triggers import setParallelData
-        setParallelData(code)
-        # No need for pull-down (resetting to 0) as per professor's comment
-        # "triggers are no longer pulled down"
-    except ImportError:
-        print("Triggers module not found. Creating a simulated trigger function.")
-        # Define a fallback version if module not found
-        def setParallelData(code=1):
-            print(f"SIMULATED TRIGGER: {code}")
-        
-        # Use the simulated function
-        setParallelData(code)
-
 # ----- Experiment Interface -----
-
 def show_experiment_info_dialog():
     """
     Display dialog to gather experiment and participant information.
@@ -373,7 +361,7 @@ def load_stimuli():
                 print(f"Successfully loaded {stim_type} with alternative method")
             except Exception as e2:
                 print(f"Alternative loading also failed: {e2}")
-                stimuli[stim_type] = sound.Sound(440, secs=0.1)  # Fallback tone
+                stimuli[stim_type] = sound.Sound(440, secs=0.1)  # Fallback tone # type: ignore
     
     return stimuli
 
@@ -528,7 +516,6 @@ def save_and_quit(win, blocks, stim_lists, exp_info, participant_responses, earl
             win.close()
         core.quit()
 
-
 def run_experiment(exp_info):
     """
     Run the main experiment with optimized PsychToolBox timing for EEG integration.
@@ -547,6 +534,10 @@ def run_experiment(exp_info):
     # Generate or load optimized blocks
     block_name = f"p{exp_info['participant_id']}_blocks"
     blocks = generate_or_load_blocks(params, block_name, force_regenerate=exp_info['regenerate_blocks'])
+    
+    if not blocks:
+        print("Error generating or loading blocks. Exiting.")
+        return
     
     stim_lists = []
     for block in blocks:
@@ -686,7 +677,7 @@ def run_experiment(exp_info):
         
         # Send block start trigger
         if exp_info['eeg_enabled']:
-            send_trigger(TRIGGER_CODES['special_codes']['block_start'])
+            setParallelData(TRIGGER_CODES['special_codes']['block_start'])
         
         # Show fixation cross
         fixation.draw()
@@ -695,32 +686,37 @@ def run_experiment(exp_info):
         # Pre-block fixation period with PTB precision
         fixation_end = ptb.GetSecs() + 2.0  # 2 second pre-block fixation
         while ptb.GetSecs() < fixation_end:
-            ptb.WaitSecs(0.001)  # Minimal wait
+            ptb.WaitSecs(0.01)  # Minimal wait
         
         # Clear any previous key presses
         event.clearEvents()
         
         # Present stimuli in this block
-        for trial_idx, stim in enumerate(stim_list):
+        for trial_idx, stim in enumerate(stim_list):           
+            start_frame = win.getFutureFlipTime(clock="ptb") # clock="ptb" ensures compatibility with ptb.clock
+            
+            sound_stim = stimuli[stim['type']]
+            measured_stim_onset = 0
+            
+            def on_stimuli():
+                # Play the sound with precise onset time
+                sound_stim.play(when=start_frame)
+                # Present EEG trigger immediately after scheduling sound
+                if exp_info['eeg_enabled']:
+                    setParallelData(stim['trigger_code'])        
+                
+                # Record exact stimulus onset time
+                nonlocal measured_stim_onset
+                measured_stim_onset = ptb.GetSecs()
+                                               
+            win.callOnFlip(on_stimuli)
+            
             # Draw fixation for this trial
             fixation.draw()
             win.flip()
             
-            # Get current time for precise scheduling
-            now = ptb.GetSecs()
-            
-            # Play the sound with precise onset time
-            sound_stim = stimuli[stim['type']]
-            sound_stim.play(when=now)
-            
-            # Present EEG trigger immediately after scheduling sound
-            if exp_info['eeg_enabled']:
-                send_trigger(stim['trigger_code'])
-            
-            # Record exact stimulus onset time
-            stim_onset = ptb.GetSecs()
-            stim['actual_onset'] = stim_onset
-            stim['onset_precision'] = stim_onset - now
+            stim['actual_onset'] = measured_stim_onset
+            stim['onset_precision'] = measured_stim_onset - start_frame
             
             # Log the precision
             logging.log(level=logging.INFO, 
@@ -730,80 +726,30 @@ def run_experiment(exp_info):
             detected_duration = params['stim_durations'].get(stim['type'])
             if detected_duration and detected_duration != stim['duration']:
                 print(f"Warning: Duration mismatch for {stim['type']} - " 
-                      f"CSV has {stim['duration']}ms but detected {detected_duration}ms")
-                # Use the detected duration for timing
-                stim_duration_sec = detected_duration / 1000.0
-            else:
-                stim_duration_sec = stim['duration'] / 1000.0
-            
-            # Calculate end time with PTB precision
-            stim_end_time = stim_onset + stim_duration_sec
-            
-            # During stimulus presentation period with PTB timing
-            while ptb.GetSecs() < stim_end_time:
-                # Check for space bar presses (AI-Human switch indication)
-                keys = event.getKeys(['space', 'escape', 'q'])
-                
-                if 'space' in keys:
-                    # Record response time with high precision
-                    response_time = ptb.GetSecs()
-                    time_in_trial = response_time - stim_onset
-                    
-                    # Log response with precise timing
-                    participant_responses.append({
-                        'block': block_idx + 1,
-                        'trial': trial_idx + 1,
-                        'time': response_time,
-                        'time_in_trial': time_in_trial,
-                        'stimulus_type': stim['type'],
-                        'is_deviant': stim['is_deviant'],
-                        'transition_type': stim.get('transition_type', '') if stim['is_deviant'] else '',
-                        'precision': 'PTB',  # Mark as using PTB precision
-                        'during': 'stimulus'  # Indicate response during stimulus period
-                    })
-                    
-                    # Log the response
-                    logging.log(level=logging.INFO, 
-                                msg=f"Response at block {block_idx+1}, trial {trial_idx+1}, "
-                                    f"time {response_time:.6f}s, stim {stim['type']}")
-                    
-                    # Show blue fixation for feedback
-                    blue_fixation.draw()
-                    win.flip()
-                    
-                    # Precise feedback duration
-                    feedback_end = ptb.GetSecs() + 0.2  # 200ms feedback
-                    while ptb.GetSecs() < feedback_end:
-                        # Just a minimal wait to avoid blocking completely
-                        ptb.WaitSecs(0.001)
-                    
-                    # Return to white fixation
-                    fixation.draw()
-                    win.flip()
-                
-                if 'escape' in keys or 'q' in keys:
-                    # Update current position info for partial data saving
-                    exp_info['current_block'] = block_idx
-                    exp_info['current_trial'] = trial_idx
-                    # Save data and exit
-                    save_and_quit(win, blocks, stim_lists, exp_info, participant_responses, early_exit=True)
-                
-                # Minimal wait to avoid busy loop while maintaining precision
-                ptb.WaitSecs(0.001)
-            
-            # Calculate jitter end time with PTB precision
-            jitter_sec = stim['jitter'] / 1000.0
-            jitter_end_time = ptb.GetSecs() + jitter_sec
-            
+                    f"CSV has {stim['duration']}ms but detected {detected_duration}ms")
+
+            # Calculate jittered end time
+            jitter = stim['jitter'] / 1000  # Convert ms to seconds
+            detected_duration /= 1000
+            trial_end_time = measured_stim_onset + detected_duration + jitter
+
             # During jitter period with PTB timing
-            while ptb.GetSecs() < jitter_end_time:
+            while (now := ptb.GetSecs()) < trial_end_time:
                 # Check for space bar presses
+
                 keys = event.getKeys(['space', 'escape', 'q'])
+                
+                time_since_stim = now - measured_stim_onset
+                # Find during which part of the trial the response was made
+                if time_since_stim > detected_duration:
+                    during = 'jitter'
+                else:
+                    during = 'stimulus'
                 
                 if 'space' in keys:
                     # Record response time with high precision
                     response_time = ptb.GetSecs()
-                    time_since_stim = response_time - stim_onset
+                    time_since_stim = response_time - start_frame
                     
                     # Log response with precise timing
                     participant_responses.append({
@@ -815,26 +761,19 @@ def run_experiment(exp_info):
                         'is_deviant': stim['is_deviant'],
                         'transition_type': stim.get('transition_type', '') if stim['is_deviant'] else '',
                         'precision': 'PTB',  # Mark as using PTB precision
-                        'during': 'jitter'   # Indicate response during jitter period
+                        'during': during   # Indicate response during jitter period
                     })
                     
                     # Log the response
                     logging.log(level=logging.INFO, 
-                                msg=f"Response at block {block_idx+1}, trial {trial_idx+1} (jitter), "
+                                msg=f"Response at block {block_idx+1}, trial {trial_idx+1} ({during}), "
                                     f"time {response_time:.6f}s, stim {stim['type']}")
-                    
-                    # Show blue fixation for feedback
-                    blue_fixation.draw()
-                    win.flip()
-                    
+                                        
                     # Precise feedback duration
                     feedback_end = ptb.GetSecs() + 0.2  # 200ms feedback
                     while ptb.GetSecs() < feedback_end:
-                        # Just a minimal wait to avoid blocking completely
-                        ptb.WaitSecs(0.001)
-                    
-                    # Return to white fixation
-                    fixation.draw()
+                        blue_fixation.draw()
+                        
                     win.flip()
                 
                 if 'escape' in keys or 'q' in keys:
@@ -845,17 +784,17 @@ def run_experiment(exp_info):
                     save_and_quit(win, blocks, stim_lists, exp_info, participant_responses, early_exit=True)
                 
                 # Minimal wait to avoid busy loop while maintaining precision
-                ptb.WaitSecs(0.001)
+                ptb.WaitSecs(1e-4)
         
         # Send block end trigger
         if exp_info['eeg_enabled']:
-            send_trigger(TRIGGER_CODES['special_codes']['block_end'])
+            setParallelData(TRIGGER_CODES['special_codes']['block_end'])
         
         # Show break between blocks (except after the last block)
         if block_idx < len(stim_lists) - 1:
             # Send break start trigger if EEG is enabled
             if exp_info['eeg_enabled']:
-                send_trigger(TRIGGER_CODES['special_codes']['break_start'])
+                setParallelData(TRIGGER_CODES['special_codes']['break_start'])
             
             # Create break text components
             break_text = visual.TextStim(
@@ -926,7 +865,7 @@ def run_experiment(exp_info):
             
             # Send break end trigger if EEG is enabled
             if exp_info['eeg_enabled']:
-                send_trigger(TRIGGER_CODES['special_codes']['break_end'])
+                setParallelData(TRIGGER_CODES['special_codes']['break_end'])
                 
             # Wait for space to continue
             event.waitKeys(keyList=['space'])
