@@ -697,10 +697,10 @@ def run_experiment(exp_info):
             
             sound_stim = stimuli[stim['type']]
             measured_stim_onset = 0
+            # Play the sound with precise onset time
+            sound_stim.play(when = start_frame)
             
             def on_stimuli():
-                # Play the sound with precise onset time
-                sound_stim.play(when=start_frame)
                 # Present EEG trigger immediately after scheduling sound
                 if exp_info['eeg_enabled']:
                     setParallelData(stim['trigger_code'])        
