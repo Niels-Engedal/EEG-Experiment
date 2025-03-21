@@ -678,6 +678,8 @@ def run_experiment(exp_info):
         # Send block start trigger
         if exp_info['eeg_enabled']:
             setParallelData(TRIGGER_CODES['special_codes']['block_start'])
+            ptb.WaitSecs(1e-4)
+            setParallelData(0) # Clear the trigger after 1 msec
         
         # Show fixation cross
         fixation.draw()
@@ -692,7 +694,7 @@ def run_experiment(exp_info):
         event.clearEvents()
         
         # Present stimuli in this block
-        for trial_idx, stim in enumerate(stim_list):           
+        for trial_idx, stim in enumerate(stim_list):            
             start_frame = win.getFutureFlipTime(clock="ptb") # clock="ptb" ensures compatibility with ptb.clock
             
             sound_stim = stimuli[stim['type']]
@@ -714,7 +716,7 @@ def run_experiment(exp_info):
             # Draw fixation for this trial
             fixation.draw()
             win.flip()
-            
+
             stim['actual_onset'] = measured_stim_onset
             stim['onset_precision'] = measured_stim_onset - start_frame
             
@@ -732,9 +734,9 @@ def run_experiment(exp_info):
             jitter = stim['jitter'] / 1000  # Convert ms to seconds
             detected_duration /= 1000
             trial_end_time = measured_stim_onset + detected_duration + jitter
-
-            # During jitter period with PTB timing
+            
             while (now := ptb.GetSecs()) < trial_end_time:
+                
                 # Check for space bar presses
 
                 keys = event.getKeys(['space', 'escape', 'q'])
@@ -785,16 +787,24 @@ def run_experiment(exp_info):
                 
                 # Minimal wait to avoid busy loop while maintaining precision
                 ptb.WaitSecs(1e-4)
+                
+                if exp_info["eeg_enabled"]:
+                    setParallelData(0) # Clear the trigger after 1 msec
+                
         
         # Send block end trigger
         if exp_info['eeg_enabled']:
             setParallelData(TRIGGER_CODES['special_codes']['block_end'])
+            ptb.WaitSecs(1e-4)
+            setParallelData(0) # Clear the trigger after 1 msec
         
         # Show break between blocks (except after the last block)
         if block_idx < len(stim_lists) - 1:
             # Send break start trigger if EEG is enabled
             if exp_info['eeg_enabled']:
                 setParallelData(TRIGGER_CODES['special_codes']['break_start'])
+                ptb.WaitSecs(1e-4)
+                setParallelData(0) # Clear the trigger after 1 msec
             
             # Create break text components
             break_text = visual.TextStim(
@@ -866,6 +876,8 @@ def run_experiment(exp_info):
             # Send break end trigger if EEG is enabled
             if exp_info['eeg_enabled']:
                 setParallelData(TRIGGER_CODES['special_codes']['break_end'])
+                ptb.WaitSecs(1e-4)
+                setParallelData(0) # Clear the trigger after 1 msec
                 
             # Wait for space to continue
             event.waitKeys(keyList=['space'])
