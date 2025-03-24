@@ -40,7 +40,7 @@ TRIGGER_CODES = {
         'block_start': 1,
         'block_end': 2,
         "incorrect_response": 3,
-        "correct_reponse": 4
+        "correct_response": 4 # changed to correct name
     }
 }
 
