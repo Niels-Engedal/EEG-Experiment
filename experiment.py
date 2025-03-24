@@ -33,7 +33,8 @@ except:
     def setParallelData(code=1):
         print(f"SIMULATED TRIGGER: {code}")
         
-
+# Setup trigger pull-down delay
+t_clear = 2 / 1000  # 2 ms
 
 # Setup hardware preferences
 prefs.hardware['audioLib'] = 'PTB' # type: ignore
@@ -678,7 +679,7 @@ def run_experiment(exp_info):
         # Send block start trigger
         if exp_info['eeg_enabled']:
             setParallelData(TRIGGER_CODES['special_codes']['block_start'])
-            ptb.WaitSecs(1e-4)
+            ptb.WaitSecs(t_clear)
             setParallelData(0) # Clear the trigger after 1 msec
         
         # Show fixation cross
@@ -748,11 +749,20 @@ def run_experiment(exp_info):
                 else:
                     during = 'stimulus'
                 
+                response = 0
+
                 if 'space' in keys:
                     # Record response time with high precision
                     response_time = ptb.GetSecs()
                     time_since_stim = response_time - start_frame
                     
+                    correctness = stim['is_deviant'] and "ai" in stim.get('transition_type', '').lower() and "n" in stim.get('transition_type', '').lower()
+
+                    if not correctness:
+                        response = TRIGGER_CODES['special_codes']["incorrect_response"]
+                    else:
+                        response = TRIGGER_CODES["special_codes"]["correct_response"]
+
                     # Log response with precise timing
                     participant_responses.append({
                         'block': block_idx + 1,
@@ -786,16 +796,16 @@ def run_experiment(exp_info):
                     save_and_quit(win, blocks, stim_lists, exp_info, participant_responses, early_exit=True)
                 
                 # Minimal wait to avoid busy loop while maintaining precision
-                ptb.WaitSecs(1e-4)
+                ptb.WaitSecs(t_clear)
                 
                 if exp_info["eeg_enabled"]:
-                    setParallelData(0) # Clear the trigger after 1 msec
+                    setParallelData(response) # Clear the trigger after 1 msec
                 
         
         # Send block end trigger
         if exp_info['eeg_enabled']:
             setParallelData(TRIGGER_CODES['special_codes']['block_end'])
-            ptb.WaitSecs(1e-4)
+            ptb.WaitSecs(t_clear)
             setParallelData(0) # Clear the trigger after 1 msec
         
         # Show break between blocks (except after the last block)
@@ -803,7 +813,7 @@ def run_experiment(exp_info):
             # Send break start trigger if EEG is enabled
             if exp_info['eeg_enabled']:
                 setParallelData(TRIGGER_CODES['special_codes']['break_start'])
-                ptb.WaitSecs(1e-4)
+                ptb.WaitSecs(t_clear)
                 setParallelData(0) # Clear the trigger after 1 msec
             
             # Create break text components
@@ -876,7 +886,7 @@ def run_experiment(exp_info):
             # Send break end trigger if EEG is enabled
             if exp_info['eeg_enabled']:
                 setParallelData(TRIGGER_CODES['special_codes']['break_end'])
-                ptb.WaitSecs(1e-4)
+                ptb.WaitSecs(t_clear)
                 setParallelData(0) # Clear the trigger after 1 msec
                 
             # Wait for space to continue

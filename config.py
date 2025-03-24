@@ -38,7 +38,9 @@ TRIGGER_CODES = {
         'break_start': 10,
         'break_end': 11,
         'block_start': 1,
-        'block_end': 2
+        'block_end': 2,
+        "incorrect_response": 3,
+        "correct_reponse": 4
     }
 }
 
